@@ -3,7 +3,7 @@ from services.beneficiario_service import listar_beneficiarios
 
 api = Namespace("beneficiarios", description="Dados dos beneficiários por enquadramento")
 
-beneficiario_model = api.model("Beneficiario", {
+beneficiario_model = api.model("Beneficiario por enquadramento", {
     "uf": fields.String(required=True, description="Unidade da Federação"),
     "extra_cadun": fields.Integer(description="Beneficiários extra CadÚnico"),
     "bolsa_familia": fields.Integer(description="Beneficiários do Bolsa Família"),
