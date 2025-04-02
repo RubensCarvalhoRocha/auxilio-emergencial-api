@@ -35,7 +35,7 @@ pip install -r requirements.txt
 python app.py
 ```
 📚 Acessando a documentação Swagger
-Após iniciar a API, acesse: http://localhost:5000
+Após iniciar a API, acesse: http://localhost:5000/docs
 
 Você verá todos os endpoints documentados com exemplos e descrições interativas.
 
