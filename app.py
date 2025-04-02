@@ -1,7 +1,7 @@
 from flask import Flask
 from config import Config
 from extensions import db
-from controllers.beneficiario_controller import api as beneficiario_ns
+from controllers.beneficiario_por_enquadramento_controller import api as beneficiario_ns
 from flask_restx import Api
 
 def create_app():

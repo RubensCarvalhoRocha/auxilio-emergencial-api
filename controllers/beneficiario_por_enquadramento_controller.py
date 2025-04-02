@@ -1,5 +1,5 @@
 from flask_restx import Namespace, Resource, fields
-from services.beneficiario_service import listar_beneficiarios
+from services.beneficiario_por_enquadramento_service import listar_beneficiarios
 
 api = Namespace("beneficiarios", description="Dados dos beneficiários por enquadramento")
 
