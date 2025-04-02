@@ -1,3 +1,5 @@
+from extensions import db
+
 class UFTotalBeneficiarios(db.Model):
     __tablename__ = 'uf_total_beneficiarios'
 
