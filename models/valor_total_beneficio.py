@@ -1,3 +1,5 @@
+from extensions import db
+
 class ValorTotalBeneficio(db.Model):
     __tablename__ = 'valor_total_beneficio'
 
