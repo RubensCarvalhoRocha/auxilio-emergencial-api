@@ -1,8 +1,10 @@
 from flask import Flask
 from config import Config
 from extensions import db
-from controllers.beneficiario_por_enquadramento_controller import api as beneficiario_ns
 from flask_restx import Api
+
+from controllers.beneficiario_por_enquadramento_controller import api as beneficiario_ns
+from controllers.populacao_estados_controller import api as populacao_estados_ns
 
 def create_app():
     app = Flask(__name__)
@@ -14,6 +16,7 @@ def create_app():
               description="API REST para onter os dados do auxilio emergencial", doc="/docs")
 
     api.add_namespace(beneficiario_ns, path="/beneficiarios")
+    api.add_namespace(populacao_estados_ns, path="/populacao-estados")
 
     with app.app_context():
         db.create_all()

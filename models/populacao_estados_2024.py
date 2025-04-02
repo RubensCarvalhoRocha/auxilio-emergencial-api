@@ -1,3 +1,4 @@
+from extensions import db
 class PopulacaoEstados2024(db.Model):
     __tablename__ = 'populacao_estados_2024'
 
