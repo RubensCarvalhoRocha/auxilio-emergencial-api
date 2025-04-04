@@ -2,6 +2,7 @@ from flask import Flask
 from config import Config
 from extensions import db
 from flask_restx import Api
+from flask_cors import CORS  # ADICIONE ISSO
 
 from controllers.beneficiario_por_enquadramento_controller import api as beneficiario_ns
 from controllers.populacao_estados_controller import api as populacao_estados_ns
@@ -13,6 +14,8 @@ def create_app():
     app.config.from_object(Config)
 
     db.init_app(app)
+    
+    CORS(app)  # ADICIONE ISSA LINHA AQUI
 
     api = Api(app, version="1.0", title="API Auxilio Emergencial",
               description="API REST para onter os dados do auxilio emergencial", doc="/docs")
